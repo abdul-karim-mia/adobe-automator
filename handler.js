@@ -15,6 +15,14 @@ const APP_MAP = {
     indesign: {
         win: 'InDesign.Application',
         mac: 'Adobe InDesign'
+    },
+    premiere: {
+        win: 'Premiere.Application',
+        mac: 'Adobe Premiere Pro'
+    },
+    aftereffects: {
+        win: 'AfterEffects.Application',
+        mac: 'Adobe After Effects'
     }
 };
 
@@ -42,14 +50,14 @@ end tell
 
 module.exports = {
     name: 'adobe-automator',
-    version: '1.0.0',
+    version: '1.1.0',
     description: 'Adobe Application Automation Bridge',
 
     commands: {
         runScript: {
             description: 'Run a custom ExtendScript (JSX) in an Adobe application',
             params: {
-                app: { type: 'string', enum: ['photoshop', 'illustrator', 'indesign'], description: 'The Adobe application to target', required: true },
+                app: { type: 'string', enum: ['photoshop', 'illustrator', 'indesign', 'premiere', 'aftereffects'], description: 'The Adobe application to target', required: true },
                 script: { type: 'string', description: 'The JSX code to execute (ES3)', required: true }
             },
             handler: async (ctx) => {

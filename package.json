@@ -1,6 +1,6 @@
 {
     "name": "adobe-automator",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Cross-platform automation for Adobe Photoshop, Illustrator, and InDesign.",
     "main": "handler.js",
     "os": [

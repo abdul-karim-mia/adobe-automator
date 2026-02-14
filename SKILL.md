@@ -15,7 +15,7 @@ metadata:
   }
 ---
 
-# Adobe Master Automator (v1.0.0)
+# Adobe Master Automator (v1.1.0)
 
 A generalized skill for automating multiple Adobe applications using a cross-platform ExtendScript bridge.
 
@@ -24,6 +24,8 @@ A generalized skill for automating multiple Adobe applications using a cross-pla
 - **Photoshop**
 - **Illustrator**
 - **InDesign**
+- **Premiere Pro**
+- **After Effects**
 
 ## Commands
 
@@ -31,7 +33,7 @@ A generalized skill for automating multiple Adobe applications using a cross-pla
 Executes raw ExtendScript (ES3) in the target application.
 
 **Parameters:**
-- `app`: Target application (`photoshop`, `illustrator`, `indesign`).
+- `app`: Target application (`photoshop`, `illustrator`, `indesign`, `premiere`, `aftereffects`).
 - `script`: The JSX code to execute.
 
 ## 🛠 AI Protocol
