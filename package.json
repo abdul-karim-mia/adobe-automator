@@ -1,0 +1,29 @@
+{
+    "name": "adobe-automator",
+    "version": "1.0.0",
+    "description": "Cross-platform automation for Adobe Photoshop, Illustrator, and InDesign.",
+    "main": "handler.js",
+    "os": [
+        "win32",
+        "darwin"
+    ],
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "author": "Abdul Karim Mia",
+    "openclaw": {
+        "requires": {
+            "bins": [
+                "cscript",
+                "osascript"
+            ],
+            "os": [
+                "windows",
+                "macos"
+            ],
+            "files": [],
+            "env": [],
+            "config": []
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "adobe-automator",
+    "version": "1.0.0",
+    "description": "Generalized Adobe application automation via ExtendScript bridge.",
+    "author": "Abdul Karim Mia",
+    "homepage": "https://github.com/abdul-karim-mia/adobe-automator",
+    "metadata": {
+        "openclaw": {
+            "requires": {
+                "bins": [
+                    "cscript",
+                    "osascript"
+                ],
+                "os": [
+                    "windows",
+                    "macos"
+                ],
+                "env": [],
+                "config": []
+            }
+        }
+    }
+}
