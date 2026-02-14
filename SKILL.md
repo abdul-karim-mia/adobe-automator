@@ -1,12 +1,12 @@
 ---
 name: adobe-automator
-description: "Universal Adobe application automation via ExtendScript bridge. Supports Photoshop, Illustrator, and InDesign."
+description: "Universal Adobe application automation via ExtendScript bridge. Supports Photoshop, Illustrator, InDesign, Premiere Pro, and After Effects."
 metadata:
   {
     "openclaw":
       {
         "requires": { 
-          "bins": ["cscript", "osascript"], 
+          "bins": [], 
           "os": ["windows", "macos"],
           "env": [], 
           "config": [] 
@@ -15,7 +15,7 @@ metadata:
   }
 ---
 
-# Adobe Master Automator (v1.1.0)
+# Adobe Master Automator (v1.1.1)
 
 A generalized skill for automating multiple Adobe applications using a cross-platform ExtendScript bridge.
 
@@ -48,7 +48,9 @@ Executes raw ExtendScript (ES3) in the target application.
 
 ## Setup
 
-The skill automatically detects your operating system and routes commands to Photoshop, Illustrator, or InDesign.
+The skill automatically detects your operating system and routes commands to the appropriate application.
+- **Windows**: Uses built-in `cscript` (Windows Script Host).
+- **macOS**: Uses built-in `osascript` (AppleScript).
 
 ---
 Developed for the OpenClaw community by [Abdul Karim Mia](https://github.com/abdul-karim-mia).

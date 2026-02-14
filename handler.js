@@ -50,7 +50,7 @@ end tell
 
 module.exports = {
     name: 'adobe-automator',
-    version: '1.1.0',
+    version: '1.1.1',
     description: 'Adobe Application Automation Bridge',
 
     commands: {
