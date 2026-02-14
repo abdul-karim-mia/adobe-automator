@@ -15,7 +15,7 @@ metadata:
   }
 ---
 
-# Adobe Master Automator (v1.1.1)
+# Adobe Master Automator (v1.1.2)
 
 A generalized skill for automating multiple Adobe applications using a cross-platform ExtendScript bridge.
 
@@ -43,8 +43,12 @@ Executes raw ExtendScript (ES3) in the target application.
 - **Target App Availability**: Ensure the target application is installed and running (or able to launch) on the host system.
 
 ### 2. Security & Side Effects
-- **Filesystem Access**: Scripts have direct access to the local filesystem via `File` and `Folder` objects.
-- **Side Effects**: Scripts can read, write, or delete files. Review generated code before execution.
+> [!CAUTION]
+> **High Risk Capability**: The `runScript` command accepts and executes **arbitrary ExtendScript (JSX)** code. Attempting to restrict this would break the skill's core purpose, but users must be aware of the implications.
+
+- **Filesystem Access**: The Adobe ExtendScript engine has **unrestricted access to the host filesystem** via the `File` and `Folder` objects.
+- **Untrusted Scripts**: ❌ **NEVER** execute scripts from untrusted sources. A malicious script could delete files, exfiltrate data, or install persistent malware.
+- **Verification**: Always inspect the `script` parameter payload before allowing execution.
 
 ## Setup
 

@@ -50,7 +50,7 @@ end tell
 
 module.exports = {
     name: 'adobe-automator',
-    version: '1.1.1',
+    version: '1.1.2',
     description: 'Adobe Application Automation Bridge',
 
     commands: {
@@ -70,6 +70,8 @@ module.exports = {
                 const timestamp = Date.now();
                 const jsxPath = path.join(tempDir, `adobe_script_${timestamp}.jsx`);
 
+                // SECURITY WARNING: This executes arbitrary ExtendScript which has filesystem access.
+                // The skill relies on the user/agent to verify the script content before execution.
                 fs.writeFileSync(jsxPath, ctx.params.script);
 
                 let result;
